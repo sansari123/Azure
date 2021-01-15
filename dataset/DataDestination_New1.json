@@ -1,0 +1,146 @@
+{
+	"name": "DataDestination_New1",
+	"properties": {
+		"description": "Connect to your data destination store.",
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FIRSTNAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LASTNAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GENDER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DOB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STARTDATE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ENDDATE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EMAIL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COUNTRY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STATECODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STATE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CLAIMAMOUNT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "RESPONSE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COVERAGE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EDUCATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EMPLOYMENTSTATUS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INCOME",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MARITALSTATUS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MONTHLYPREMIUMAUTO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MONTHSSINCELASTCLAIM",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MONTHSSINCEPOLICYINCEPTION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NUMBEROFOPENCOMPLAINTS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NUMBEROFPOLICIES",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "POLICYTYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "POLICY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CLAIMREASON",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SALESCHANNEL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TOTALCLAIMAMOUNT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VEHICLECLASS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VEHICLESIZE",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Insurance_Data_Azure]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

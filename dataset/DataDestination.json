@@ -1,0 +1,138 @@
+{
+	"name": "DataDestination",
+	"properties": {
+		"description": "Connect to your data destination store.",
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "ID",
+				"type": "String"
+			},
+			{
+				"name": "FIRSTNAME",
+				"type": "String"
+			},
+			{
+				"name": "LASTNAME",
+				"type": "String"
+			},
+			{
+				"name": "GENDER",
+				"type": "String"
+			},
+			{
+				"name": "DOB",
+				"type": "String"
+			},
+			{
+				"name": "STARTDATE",
+				"type": "String"
+			},
+			{
+				"name": "ENDDATE",
+				"type": "String"
+			},
+			{
+				"name": "EMAIL",
+				"type": "String"
+			},
+			{
+				"name": "COUNTRY",
+				"type": "String"
+			},
+			{
+				"name": "STATECODE",
+				"type": "String"
+			},
+			{
+				"name": "STATE",
+				"type": "String"
+			},
+			{
+				"name": "CLAIMAMOUNT",
+				"type": "Double"
+			},
+			{
+				"name": "RESPONSE",
+				"type": "String"
+			},
+			{
+				"name": "COVERAGE",
+				"type": "String"
+			},
+			{
+				"name": "EDUCATION",
+				"type": "String"
+			},
+			{
+				"name": "EMPLOYMENTSTATUS",
+				"type": "String"
+			},
+			{
+				"name": "INCOME",
+				"type": "Int32"
+			},
+			{
+				"name": "MARITALSTATUS",
+				"type": "String"
+			},
+			{
+				"name": "MONTHLYPREMIUMAUTO",
+				"type": "Int32"
+			},
+			{
+				"name": "MONTHSSINCELASTCLAIM",
+				"type": "Int32"
+			},
+			{
+				"name": "MONTHSSINCEPOLICYINCEPTION",
+				"type": "Int32"
+			},
+			{
+				"name": "NUMBEROFOPENCOMPLAINTS",
+				"type": "Int32"
+			},
+			{
+				"name": "NUMBEROFPOLICIES",
+				"type": "Int32"
+			},
+			{
+				"name": "POLICYTYPE",
+				"type": "String"
+			},
+			{
+				"name": "POLICY",
+				"type": "String"
+			},
+			{
+				"name": "CLAIMREASON",
+				"type": "String"
+			},
+			{
+				"name": "SALESCHANNEL",
+				"type": "String"
+			},
+			{
+				"name": "TOTALCLAIMAMOUNT",
+				"type": "Double"
+			},
+			{
+				"name": "VEHICLECLASS",
+				"type": "String"
+			},
+			{
+				"name": "VEHICLESIZE",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Insurance_Data_Azure]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

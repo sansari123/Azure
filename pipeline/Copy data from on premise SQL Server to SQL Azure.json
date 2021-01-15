@@ -1,0 +1,84 @@
+{
+	"name": "Copy data from on premise SQL Server to SQL Azure",
+	"properties": {
+		"description": "Copy data from on premise SQL Server to SQL Azure.\n\nYou can also go to \"Copy Data Tool\" to get the pipeline for more connectors and scenarios.",
+		"activities": [
+			{
+				"name": "SQL_to_SQLAzure",
+				"description": "Copy data from SQL server to SQL Azure",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000
+					},
+					"enableStaging": false,
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"ID": "ID",
+							"FIRSTNAME": "FIRSTNAME",
+							"LASTNAME": "LASTNAME",
+							"GENDER": "GENDER",
+							"DOB": "DOB",
+							"STARTDATE": "STARTDATE",
+							"ENDDATE": "ENDDATE",
+							"EMAIL": "EMAIL",
+							"COUNTRY": "COUNTRY",
+							"STATECODE": "STATECODE",
+							"STATE": "STATE",
+							"CLAIMAMOUNT": "CLAIMAMOUNT",
+							"RESPONSE": "RESPONSE",
+							"COVERAGE": "COVERAGE",
+							"EDUCATION": "EDUCATION",
+							"EMPLOYMENTSTATUS": "EMPLOYMENTSTATUS",
+							"INCOME": "INCOME",
+							"MARITALSTATUS": "MARITALSTATUS",
+							"MONTHLYPREMIUMAUTO": "MONTHLYPREMIUMAUTO",
+							"MONTHSSINCELASTCLAIM": "MONTHSSINCELASTCLAIM",
+							"MONTHSSINCEPOLICYINCEPTION": "MONTHSSINCEPOLICYINCEPTION",
+							"NUMBEROFOPENCOMPLAINTS": "NUMBEROFOPENCOMPLAINTS",
+							"NUMBEROFPOLICIES": "NUMBEROFPOLICIES",
+							"POLICYTYPE": "POLICYTYPE",
+							"POLICY": "POLICY",
+							"CLAIMREASON": "CLAIMREASON",
+							"SALESCHANNEL": "SALESCHANNEL",
+							"TOTALCLAIMAMOUNT": "TOTALCLAIMAMOUNT",
+							"VEHICLECLASS": "VEHICLECLASS",
+							"VEHICLESIZE": "VEHICLESIZE"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DataSource",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DataDestination",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-01-15T07:36:58Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
